@@ -43,7 +43,6 @@ public static class SocketExtensions {
         Content = new StringContent(request.Path.Replace("/echo/", ""), Encoding.UTF8, "text/plain"),
       };
     } else if (request.Path.Equals("/user-agent")) {
-      Console.WriteLine("User agent called");
       response = new(HttpStatusCode.OK) {
         Content = new StringContent(request.Headers["User-Agent"]),
       };
